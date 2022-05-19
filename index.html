@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+
+  <title>Shopping Cart</title>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="navbar__container">
+      <!-- logo -->
+      <a href="index.html" class="navbar__logo">
+        <i class='bx bx-shopping-bag navbar__logo-icon'></i>
+        <span class="navbar__logo-text">Shoping Cart</span>
+      </a>
+
+      <!-- navegación -->
+      <nav class="navbar__nav">
+        <ul class="navbar__list">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="about.html" class="navbar__link">About</a>
+          </li>
+          <li class="navbar__item">
+            <a href="contact.html" class="navbar__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- menu boton -->
+      <div class="navbar__btn">
+        <button id="navbarBtn" class="navbar__btn-link">
+          <i class='bx bx-menu'></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- seccion de sobre nosotros -->
+  <section class="about">
+    <div class="about__container">
+      <div class="about__content">
+        <h1 class="about__title">About Us</h1>
+        <p class="about__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem, quisquam.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrapper">
+    <!-- contenido principal -->
+    <div class="container">
+      <h1>Productos</h1>
+      <hr>
+      <div class="row" id="items"></div>
+    </div>
+    <template id="template-footer">
+      <th scope="row" colspan="2">Total productos</th>
+      <td>10</td>
+      <td>
+        <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+          vaciar todo
+        </button>
+      </td>
+      <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+
+    <template id="template-carrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>Café</td>
+        <td>1</td>
+        <td>
+          <button class="btn btn-info btn-sm">
+            +
+          </button>
+          <button class="btn btn-danger btn-sm">
+            -
+          </button>
+        </td>
+        <td>$ <span>500</span></td>
+      </tr>
+    </template>
+    <div class="wrapper__container">
+      <div class="wrapper__content">
+        <!-- aquí se agregaran los productos -->
+        <div class="wrapper__products">
+          <template id="template-card">
+            <div class="col-12 col-md-4 mb-2">
+              <div class="card">
+                <img src="" alt="" class="card-img" />
+                <div class="card-body">
+                  <h5>Titulo</h5>
+                  <p>precio</p>
+                  <h4>Moneda</h4>
+
+                  <button class="btn btn-dark">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- carrito de compras -->
+    <aside class="wrapper__sidebar">
+      <div class="wrapper__sidebar-cart">
+        <h3 class="wrapper__sidebar-cart-title">Carrito</h3>
+
+        <!-- aquí se agregaran los productos al carrito -->
+        <div class="wrapper__sidebar-cart-items">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="items2"></tbody>
+            <tfoot>
+              <tr id="footer">
+                <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+              </tr>
+            </tfoot>
+          </table>
+          <!-- botón de pagar -->
+          <div class="wrapper__sidebar-cart-btn">
+            <button class="wrapper__sidebar-cart-btn-link">
+              <i class='bx bx-shopping-bag'></i>
+              <span class="wrapper__sidebar-cart-btn-text">Checkout</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__copy">
+      <p class="footer__copy-text">
+        <i class='bx bx-shopping-bag footer__logo-icon'></i> <span class="footer__logo-text">Shoping Cart</span>&copy;
+        2022.
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

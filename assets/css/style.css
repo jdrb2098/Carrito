@@ -1,0 +1,41 @@
+html {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+.navbar__container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar__list{
+  display: flex;
+  gap: 2rem;
+}
+.navbar__list li{
+  overflow: hidden;
+}
+.navbar__btn{
+  display: none;
+}
+.footer{
+  text-align: center;
+}
